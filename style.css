@@ -13,7 +13,8 @@ html {
 
 body {
     overflow-x: hidden;
-
+    background: url(portfolio.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* body{
@@ -58,7 +59,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: 3s;
+    /* transition: 3s; */
 
 }
 
@@ -67,12 +68,12 @@ body {
 
 }
 
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: flex-start;
     height: 100vh;
-    background: url(portfolio.jpg) no-repeat;
+    /* background: url(portfolio.jpg) no-repeat; */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -80,6 +81,7 @@ body {
     align-items: center;
     padding: 120px 10% 60px;
     color: rgb(34, 166, 184);
+    background: transparent;
 }
 
 .profile-pic {
@@ -180,9 +182,7 @@ body {
 /* responsive for talet */
 
 
-/* ==========================
-   TABLET RESPONSIVE
-========================== */
+   /* TABLET RESPONSIVE */
 
 @media (max-width: 992px) {
 
@@ -206,10 +206,8 @@ body {
 }
 
 
-/* ==========================
-   HAMBURGER ICON
-   Hidden on Desktop
-========================== */
+   /* HAMBURGER ICON
+   Hidden on Desktop */
 
 .menu-icon {
     display: none;
@@ -270,9 +268,9 @@ body {
     /* Home Section */
 
     .home {
-        min-height: 100vh;
+        min-height: auto;
         height: auto;
-        padding: 110px 6% 40px;
+        padding: 110px 6% 15px;
     }
 
     .profile-pic {
@@ -348,5 +346,220 @@ body {
     .btn-box {
         font-size: 13px;
     }
+
+}
+
+/* second section about */
+.about {
+    width: 100%;
+    min-height: auto;
+    padding: 25px 5% 10px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+}
+
+/* side by side four logo */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+
+}
+
+.about-card {
+    padding: 25px 15px;
+    text-align: center;
+
+}
+
+/* images */
+.about-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+
+}
+
+/* titles name */
+.about-card h2 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 15px;
+
+}
+
+/* click to know more */
+.know-more {
+    color: #0ef;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.know-more :hover {
+    color: #fff;
+    text-decoration: underline;
+
+}
+
+/* for details view */
+.detail-view {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+    background: transparent;
+
+}
+
+/* details image view svg */
+.detail-view img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+}
+
+/* detail name */
+.detail-view h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #0ef;
+
+}
+
+/* details content */
+#detail-content {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 38px;
+
+}
+
+/* hide detail view */
+.detail-view[hidde] {
+    display: none;
+
+}
+
+/* back button */
+#detail-back {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 30px;
+    background: #0ef;
+    color: #081b29;
+    border: none;
+    border-radius: 6px;
+    font-size: 16x;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#detail-back:hover {
+    background: #fff;
+    box-shadow: 0 0 15px #0ef;
+
+}
+
+/* for tablet responsiv */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* for mobiel responsiv */
+@media (max-width: 600px) {
+    .about {
+        padding: 15px 5% 10px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-card h2 {
+        font-size: 22px;
+    }
+
+    .detail-view h2 {
+        font-size: 25px;
+    }
+
+    #detail-content {
+        font-size: 15px;
+    }
+}
+
+/* contact me  */
+.contact-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.contact-box {
+    background: #081b29;
+    color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 20px #00eeff;
+
+}
+
+.contact-box h2 {
+    color: #0ef;
+    margin-bottom: 25px;
+
+}
+
+.contact-box p {
+    margin: 15px 0;
+    font-size: 16px;
+
+}
+
+.contact-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 
 }
